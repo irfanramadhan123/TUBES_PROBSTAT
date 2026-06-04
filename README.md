@@ -45,6 +45,12 @@ Visualisasi uji perbandingan variansi menggunakan distribusi F.
 
 ![Distribusi F](histogram/Distribusi_F.png)
 
+### 8. Scatter Plot dan Garis Regresi
+
+Visualisasi hubungan antara durasi tidur dan produktivitas mahasiswa menggunakan regresi linier sederhana.
+
+![Scatter Plot Regresi](histogram/Scatter_Regresi_Tidur_Produktivitas.png)
+
 ---
 
 ## Teknologi yang Digunakan
