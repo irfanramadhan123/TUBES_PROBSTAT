@@ -2,22 +2,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import chi2
 
-# Derajat bebas
 df = 49
 
-# Nilai x untuk kurva Chi-Square
 x = np.linspace(20, 90, 1000)
 
-# PDF Chi-Square
 y = chi2.pdf(x, df)
 
-# Nilai kritis untuk CI 95%
 chi_left = chi2.ppf(0.025, df)
 chi_right = chi2.ppf(0.975, df)
 
 plt.figure(figsize=(10,6))
 
-# Kurva Chi-Square
 plt.plot(
     x,
     y,
@@ -26,7 +21,6 @@ plt.plot(
     label="Distribusi Chi-Square"
 )
 
-# Area kepercayaan 95%
 plt.fill_between(
     x,
     y,
@@ -36,7 +30,6 @@ plt.fill_between(
     label="Daerah Kepercayaan 95%"
 )
 
-# Garis batas kiri
 plt.axvline(
     chi_left,
     color='red',
@@ -45,7 +38,6 @@ plt.axvline(
     label=f'χ² kiri = {chi_left:.2f}'
 )
 
-# Garis batas kanan
 plt.axvline(
     chi_right,
     color='red',

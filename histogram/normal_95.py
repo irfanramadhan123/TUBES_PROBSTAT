@@ -1,19 +1,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Data dari laporan
 mean = 3.12
 s = 0.799
 n = 50
 
-# Standard Error
 se = s / np.sqrt(n)
 
-# Interval Kepercayaan 95%
 lower = 2.8929
 upper = 3.3471
 
-# Kurva normal
 x = np.linspace(mean - 4*se, mean + 4*se, 1000)
 
 y = (1 / (se * np.sqrt(2 * np.pi))) * np.exp(

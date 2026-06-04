@@ -1,19 +1,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Data dari laporan
 mean = 3.12
 s = 0.799
 n = 50
 
-# Standard Error
 se = s / np.sqrt(n)
 
-# Interval Kepercayaan 90%
 lower = 2.9306
 upper = 3.3094
 
-# Kurva normal berdasarkan distribusi mean
 x = np.linspace(mean - 4*se, mean + 4*se, 1000)
 
 y = (1 / (se * np.sqrt(2 * np.pi))) * np.exp(
@@ -22,10 +18,8 @@ y = (1 / (se * np.sqrt(2 * np.pi))) * np.exp(
 
 plt.figure(figsize=(10,6))
 
-# Kurva normal
 plt.plot(x, y, linewidth=2, label="Distribusi Normal")
 
-# Area interval kepercayaan
 plt.fill_between(
     x,
     y,
@@ -34,7 +28,6 @@ plt.fill_between(
     label="Interval Kepercayaan 90%"
 )
 
-# Garis-garis penting
 plt.axvline(lower, color='red', linestyle='--',
             label=f'Batas bawah = {lower}')
 

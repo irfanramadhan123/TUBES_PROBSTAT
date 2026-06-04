@@ -2,24 +2,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import f
 
-# Derajat bebas
 df1 = 24
 df2 = 24
 
-# Nilai F dari laporan
 f_hitung = 1.5793
 f_kiri = 0.4227
 f_kanan = 2.2324
 
-# Data x
 x = np.linspace(0, 5, 1000)
 
-# PDF Distribusi F
 y = f.pdf(x, df1, df2)
 
 plt.figure(figsize=(10,6))
 
-# Kurva F
 plt.plot(
     x,
     y,
@@ -28,7 +23,6 @@ plt.plot(
     label='Distribusi F'
 )
 
-# Area penerimaan H0
 plt.fill_between(
     x,
     y,
@@ -38,7 +32,6 @@ plt.fill_between(
     label='Daerah Penerimaan H₀'
 )
 
-# Batas kiri
 plt.axvline(
     f_kiri,
     color='red',
@@ -47,7 +40,6 @@ plt.axvline(
     label=f'Batas kiri = {f_kiri}'
 )
 
-# Batas kanan
 plt.axvline(
     f_kanan,
     color='red',
@@ -56,7 +48,6 @@ plt.axvline(
     label=f'Batas kanan = {f_kanan}'
 )
 
-# F hitung
 plt.axvline(
     f_hitung,
     color='blue',
